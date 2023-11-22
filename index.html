@@ -15,11 +15,11 @@
     <form id="carLoanForm">
         <label for="vehicleType">Select Vehicle Type:</label>
         <select id="vehicleType">
-            <option value="Economy Cars">Economy Cars</option>
-            <option value="Family Sedans">Family Sedans</option>
-            <option value="Luxury Vehicles">Luxury Vehicles</option>
-            <option value="Sports Cars">Sports Cars</option>
-            <option value="SUVs and Trucks">SUVs and Trucks</option>
+            <option value="Economy Cars">Economy Car</option>
+            <option value="Family Sedans">Family Sedan</option>
+            <option value="Luxury Vehicles">Luxury Vehicle</option>
+            <option value="Sports Cars">Sports Car</option>
+            <option value="SUVs and Trucks">SUVs and Truck</option>
         </select>
         <br><br>
         <button type="button" onclick="generateLoanDetails()">Calculate Loan Details</button>
@@ -32,55 +32,41 @@
 
 
 <script>
-    function generateLoanDetails() {
-    const vehicleBasePrices = {
-        "Economy Cars": 110,
-        "Family Sedans": 120,
-        "Luxury Vehicles": 160,
-        "Sports Cars": 190,
-        "SUVs and Trucks": 130
-    };
-
-    let vehicleType = document.getElementById("vehicleType").value;
-    let basePrice = vehicleBasePrices[vehicleType];
-
+function generateLoanDetails() {
     let drivingRecords = [
-        { record: "Clean Record (No Accidents or Violations)", increase: 0 },
-        { record: "Minor Violations (Speeding, Stop Sign Violations)", increase: 15 },
-        { record: "Major Violations (Reckless Driving)", increase: 30 },
-        { record: "At-Fault Accidents", increase: 35 },
-        { record: "Multiple Incidents", increase: 50 }
+        "Clean Record (No Accidents or Violations)",
+        "Minor Violations (Speeding, Stop Sign Violations)",
+        "Major Violations (Reckless Driving)",
+        "At-Fault Accidents",
+        "Multiple Incidents"
     ];
 
     let creditScores = [
-        { score: "450", interestRate: 18 },
-        { score: "550", interestRate: 12 },
-        { score: "630", interestRate: 8 },
-        { score: "720", interestRate: 5 },
-        { score: "810", interestRate: 2 }
+        "Credit Score: 450, Interest Rate: 18%",
+        "Credit Score: 550, Interest Rate: 12%",
+        "Credit Score: 630, Interest Rate: 8%",
+        "Credit Score: 720, Interest Rate: 5%",
+        "Credit Score: 810, Interest Rate: 2%"
     ];
 
-    let downPayments = [0, 5, 10, 15, 20, 25, 30];
+    let downPayments = ["0%", "5%", "10%", "15%", "20%", "25%", "30%"];
     let loanDurations = ["2 Years", "3 Years", "4 Years", "5 Years", "6 Years"];
 
+    let vehicleType = document.getElementById("vehicleType").value;
     let drivingRecord = drivingRecords[Math.floor(Math.random() * drivingRecords.length)];
     let creditScore = creditScores[Math.floor(Math.random() * creditScores.length)];
     let downPayment = downPayments[Math.floor(Math.random() * downPayments.length)];
     let loanDuration = loanDurations[Math.floor(Math.random() * loanDurations.length)];
 
-    let insuranceCost = basePrice * (1 + drivingRecord.increase / 100);
-
     let details = `
         <p>Vehicle Type: ${vehicleType}</p>
-        <p>Base Insurance Price: $${basePrice}</p>
-        <p>Driving Record: ${drivingRecord.record}</p>
-        <p>Adjusted Insurance Cost: $${insuranceCost.toFixed(2)}</p>
-        <p>Credit Score: ${creditScore.score}</p>
-        <p>Interest Rate: ${creditScore.interestRate}%</p>
-        <p>Down Payment Percentage: ${downPayment}%</p>
+        <p>Driving Record: ${drivingRecord}</p>
+        <p>Credit Score and Interest Rate: ${creditScore}</p>
+        <p>Down Payment Percentage: ${downPayment}</p>
         <p>Loan Duration: ${loanDuration}</p>
     `;
 
     document.getElementById("loanDetails").innerHTML = details;
 }
+
 </script>
