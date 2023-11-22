@@ -104,6 +104,7 @@ function generateLoanDetails() {
     ];
 
     let vehicleType = document.getElementById("vehicleType").value;
+    let basePrice = vehicleBasePrices[vehicleType];
     let drivingRecord = drivingRecords[Math.floor(Math.random() * drivingRecords.length)];
     let creditScore = creditScores[Math.floor(Math.random() * creditScores.length)];
     let downPayment = downPayments[Math.floor(Math.random() * downPayments.length)];
