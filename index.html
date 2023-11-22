@@ -91,31 +91,31 @@ function generateLoanDetails() {
     let loanDuration = loanDurations[Math.floor(Math.random() * loanDurations.length)];
 
     let details = `
-    <div class="justify-between gap-x-4 mb-4">
+    <div class="justify-between gap-x-4 mb-8">
     <p class="text-sm leading-6 text-indigo-300">VEHICLE TYPE</p>
     <span class="text-4xl font-bold tracking-tight text-white">${vehicleType}</span>
     </div>
 
-    <div class="justify-between gap-x-4 mb-4">
+    <div class="justify-between gap-x-4 mb-8">
     <p class="text-sm leading-6 text-indigo-300">DRIVING RECORD</p>
-    <span class="text-4xl font-bold tracking-tight text-white">Driving Record: ${drivingRecord.record}</span>
+    <span class="text-4xl font-bold tracking-tight text-white">${drivingRecord.record}</span>
     <p class="text-sm leading-6 text-gray-300">${drivingRecord.narrative}</p>
     </div>
 
-    <div class="justify-between gap-x-4 mb-4">
+    <div class="justify-between gap-x-4 mb-8">
     <p class="text-sm leading-6 text-indigo-300">CREDIT SCORE</p>
-    <span class="text-4xl font-bold tracking-tight text-white">Credit Score: ${creditScore.record}</span>
+    <span class="text-4xl font-bold tracking-tight text-white">${creditScore.score}</span>
     <p class="text-sm leading-6 text-gray-300">${creditScore.narrative}</p>
     </div>
 
-    <div class="justify-between gap-x-4 mb-4">
-    <p class="text-sm leading-6 text-indigo-300">DOWN PAYMENT</p>
-    <span class="text-4xl font-bold tracking-tight text-white">Car Loan Down Payment Percentage: ${downPayment.record}</span>
+    <div class="justify-between gap-x-4 mb-8">
+    <p class="text-sm leading-6 text-indigo-300">CAR LOAN DOWN PAYMENT</p>
+    <span class="text-4xl font-bold tracking-tight text-white">${downPayments}</span>
     </div>
 
-    <div class="justify-between gap-x-4 mb-4">
+    <div class="justify-between gap-x-4">
     <p class="text-sm leading-6 text-indigo-300">LOAN DURATION</p>
-    <span class="text-4xl font-bold tracking-tight text-white">${loanDuration.record}</span>
+    <span class="text-4xl font-bold tracking-tight text-white">${loanDuration.duration}</span>
     <p class="text-sm leading-6 text-gray-300">${loanDuration.narrative}</p>
     </div>
     `;
