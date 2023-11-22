@@ -1,11 +1,11 @@
 function generateLoanDetails() {
 
     const vehicleBasePrices = {
-        "Economy Cars": 110,
-        "Family Sedans": 120,
-        "Luxury Vehicles": 160,
-        "Sports Cars": 190,
-        "SUVs and Trucks": 130
+        "Economy Car": 110,
+        "Family Sedan": 120,
+        "Luxury Vehicle": 160,
+        "Sports Car": 190,
+        "SUVs and Truck": 130
     };
 
     let drivingRecords = [
@@ -84,7 +84,7 @@ function generateLoanDetails() {
 
     <div class="justify-between gap-x-4">
     <p class="text-sm leading-6 text-indigo-300">LOAN DURATION</p>
-    <span class="text-4xl font-bold tracking-tight text-white">${loanDuration}</span>
+    <span class="text-4xl font-bold tracking-tight text-white">${loanDuration.duration}</span>
     <p class="text-sm leading-6 text-gray-300">${loanDuration.narrative}</p>
     </div>
 
