@@ -39,7 +39,7 @@
       </button>
       </div>
 
-      <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-1 px-40">
+      <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-2 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-2 px-40">
         <div class="rounded-3xl p-8 xl:p-10 bg-white/5 ring-2 ring-indigo-500">
             <div class="flex items-center justify-between gap-x-4">
                 <h3 id="tier-freelancer" class="text-lg font-semibold leading-8 mb-8 text-white">Car Insurance Calcuation</h3>
@@ -68,6 +68,14 @@
 
 <script>
 function generateLoanDetails() {
+
+    const vehicleBasePrices = {
+        "Economy Cars": 110,
+        "Family Sedans": 120,
+        "Luxury Vehicles": 160,
+        "Sports Cars": 190,
+        "SUVs and Trucks": 130
+    };
 
     let drivingRecords = [
         { record: "Clean Record (No Accidents or Violations)", narrative: "You enjoy the most affordable insurance rates due to your impeccable driving history, with no increase in your premium. Your clean record, free of accidents and violations, ensures you pay the base rate for your car insurance." },
@@ -155,5 +163,7 @@ function generateLoanDetails() {
     document.getElementById("loanDetails").innerHTML = details;
     document.getElementById("loanDetails2").innerHTML = details2;
 }
+
+
 
 </script>
