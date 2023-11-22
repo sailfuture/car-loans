@@ -97,4 +97,4 @@ function generateLoanDetails() {
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("vehicleType").addEventListener("change", generateLoanDetails);
     
-}
+};
