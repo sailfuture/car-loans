@@ -1,11 +1,11 @@
 function generateLoanDetails() {
 
     const vehicleBasePrices = {
-        "Economy Car": 110,
-        "Family Sedan": 120,
-        "Luxury Vehicle": 160,
-        "Sports Car": 190,
-        "SUVs and Truck": 130
+        "Economy Car": "$110.00",
+        "Family Sedan": "$120.00",
+        "Luxury Vehicle": "$160.00",
+        "Sports Car": "$190.00",
+        "SUVs and Truck": "$130.00"
     };
 
     let drivingRecords = [
