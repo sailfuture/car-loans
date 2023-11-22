@@ -137,14 +137,13 @@ function generateLoanDetails() {
 
     <div class="justify-between gap-x-4 mb-8">
     <p class="text-sm leading-6 text-indigo-300">CREDIT SCORE</p>
-    <span class="text-4xl font-bold tracking-tight text-white">${creditScore.score}</span><span class="text-4xl font-bold tracking-tight text-white">/ ${creditScore.interestRate}</span>
+    <span class="text-4xl font-bold tracking-tight text-white">${creditScore.score}</span><span class="text-4xl font-bold tracking-tight text-white">/ </span>
     <p class="text-sm leading-6 text-gray-300">${creditScore.narrative}</p>
     </div>
 
     <div class="justify-between gap-x-4 mb-8">
-    <p class="text-sm leading-6 text-indigo-300">CREDIT SCORE</p>
-    <span class="text-4xl font-bold tracking-tight text-white">${creditScore.score}</span>
-    <p class="text-sm leading-6 text-gray-300">${creditScore.narrative}</p>
+    <p class="text-sm leading-6 text-indigo-300">CREDIT SCORE INTEREST RATE</p>
+    <span class="text-4xl font-bold tracking-tight text-white">${creditScore.interestRate}</span>
     </div>
 
     <div class="justify-between gap-x-4 mb-8">
@@ -155,7 +154,7 @@ function generateLoanDetails() {
     <div class="justify-between gap-x-4">
     <p class="text-sm leading-6 text-indigo-300">LOAN DURATION</p>
     <span class="text-4xl font-bold tracking-tight text-white">${loanDuration}</span>
-    <p class="text-sm leading-6 text-gray-300">${loanDurations.narrative}</p>
+    <p class="text-sm leading-6 text-gray-300">${loanDuration.narrative}</p>
     </div>
 
     `;
