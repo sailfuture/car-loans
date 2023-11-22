@@ -137,7 +137,7 @@ function generateLoanDetails() {
 
     <div class="justify-between gap-x-4 mb-8">
     <p class="text-sm leading-6 text-indigo-300">CREDIT SCORE</p>
-    <span class="text-4xl font-bold tracking-tight text-white">${creditScore.score}</span><span class="text-4xl font-bold tracking-tight text-white">/ </span>
+    <span class="text-4xl font-bold tracking-tight text-white">${creditScore.score}</span>
     <p class="text-sm leading-6 text-gray-300">${creditScore.narrative}</p>
     </div>
 
@@ -159,9 +159,13 @@ function generateLoanDetails() {
 
     `;
 
-
     document.getElementById("loanDetails").innerHTML = details;
     document.getElementById("loanDetails2").innerHTML = details2;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("vehicleType").addEventListener("change", generateLoanDetails);
+    
 }
 
 
