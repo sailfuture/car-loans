@@ -9,11 +9,11 @@ function generateLoanDetails() {
     };
 
     let drivingRecords = [
-        { record: "Clean Record (No Accidents or Violations)", recordRate: "0%", narrative: "You enjoy the most affordable insurance rates due to your impeccable driving history, with no increase in your premium. Your clean record, free of accidents and violations, ensures you pay the base rate for your car insurance." },
-        { record: "Minor Violations (Speeding, Stop Sign Violations)", recordRate: "15%", narrative: "After receiving a speeding ticket, your monthly insurance premium increases by 15%, reflecting the added risk from your minor traffic violation. This uptick serves as a financial reminder for you to adhere more closely to traffic laws." },
-        { record: "Major Violations (Reckless Driving)", recordRate: "30%", narrative: "Following a charge for reckless driving, you see a 30% hike in your insurance costs, a significant penalty for your major driving violation. This increase not only impacts your wallet but also marks you as a high-risk driver to insurers." },
-        { record: "At-Fault Accidents", recordRate: "35%", narrative: "Being involved in an at-fault accident leads to a 35% increase in your insurance premium. This rise reflects the heightened risk and potential for future claims that insurers associate with drivers who have caused accidents." },
-        { record: "Multiple Incidents", recordRate: "50%", narrative: "With a history of multiple driving incidents, including both violations and accidents, your insurance premium has surged by 50%. This substantial increase is a consequence of your repeated lapses in safe driving, making you a notably high-risk client for insurance companies." }
+        { record: "Clean Record (No Accidents or Violations)", recordRate: "+0%", narrative: "You enjoy the most affordable insurance rates due to your impeccable driving history, with no increase in your premium. Your clean record, free of accidents and violations, ensures you pay the base rate for your car insurance." },
+        { record: "Minor Violations (Speeding, Stop Sign Violations)", recordRate: "+15%", narrative: "After receiving a speeding ticket, your monthly insurance premium increases by 15%, reflecting the added risk from your minor traffic violation. This uptick serves as a financial reminder for you to adhere more closely to traffic laws." },
+        { record: "Major Violations (Reckless Driving)", recordRate: "+30%", narrative: "Following a charge for reckless driving, you see a 30% hike in your insurance costs, a significant penalty for your major driving violation. This increase not only impacts your wallet but also marks you as a high-risk driver to insurers." },
+        { record: "At-Fault Accidents", recordRate: "+35%", narrative: "Being involved in an at-fault accident leads to a 35% increase in your insurance premium. This rise reflects the heightened risk and potential for future claims that insurers associate with drivers who have caused accidents." },
+        { record: "Multiple Incidents", recordRate: "+50%", narrative: "With a history of multiple driving incidents, including both violations and accidents, your insurance premium has surged by 50%. This substantial increase is a consequence of your repeated lapses in safe driving, making you a notably high-risk client for insurance companies." }
     ];
 
     let creditScores = [
@@ -59,8 +59,9 @@ function generateLoanDetails() {
     </div>
 
     <div class="justify-between gap-x-4 mb-8">
-    <p class="text-sm leading-6 text-indigo-300">DRIVING RECORD PERCENTAGE INCREASE</p>
+    <p class="text-sm leading-6 text-indigo-300">DRIVING RECORD INSURANCE INCREASE</p>
     <span class="text-4xl font-bold tracking-tight text-white">${drivingRecord.recordRate}</span>
+    <p class="text-sm leading-6 text-gray-300">Add this percentage to your base insurance cost.</p>
     </div>
     `;
 
